@@ -20,6 +20,7 @@
 </style>
 
 <html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talonario Fallas</title>
@@ -35,9 +36,10 @@
 <?php include_once __DIR__.'../fontawesome/css.php';?>
 <link href='https://fonts.googleapis.com/css?family=Libre Barcode 39' rel='stylesheet'>
 
-<head>
+<script> document.getElementById('load',window.print());</script>
 
 </head>
+
 
 
 <body>
@@ -98,7 +100,7 @@
                         <p class="medium mt-3"><strong>Descripción: </strong></p>
                     </div>
                     <div id="parrafo2">
-                        <p class="medium border"><strong>PASHMINA 201 VER. 18-19</strong></p>
+                        <p class="medium border"><strong><?php if(isset($_GET['descripcion'])){echo $_GET['descripcion'];}?></strong></p>
                     </div>
 
                     <div class="m-1 row">
@@ -112,7 +114,7 @@
                     <p class="medium ml-3 mt-3"><strong>Descripción de falla: </strong></p></br>
                 </div>
                 <div>
-                    <p class="medium text-center">Cierre roto</p>
+                    <p class="medium text-center"><strong><?php if(isset($_GET['descripcion_falla'])){echo $_GET['descripcion_falla'];}?></p>
                 </div>
             </div>
         </div>

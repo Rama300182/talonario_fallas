@@ -15,7 +15,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- Including Font Awesome CSS from CDN to show icons -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		
+
+</script>
+
 
 </head>
 <body>
@@ -33,10 +35,10 @@
         </div>
         
         <div class="row">
-            <div class="col-3"><input type="artículo" class="form-control" placeholder="Ingrese artículo"></div>
-            <div class="col-4"><input type="artículo" class="form-control" placeholder="Descripción de artículo"></div>
-            <div class="col-4"><input type="artículo" class="form-control" placeholder="Descripción de falla"></div>
-            <div class="col-1"><button type="submit" class="btn btn-success" action="http://localhost/talonario_fallas/talonario.php?codigo=0303456" target="_blank"><i class="bi-printer"></i>Imprimir</button></div>
+            <div class="col-3"><input type="text" class="form-control" placeholder="Ingrese artículo" id="codigo"></div>
+            <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de artículo" id="descripcion_articulo"></div>
+            <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de falla" id="descripcion_falla"></div>
+            <div class="col-1"><button type="submit" class="btn btn-success" action="./talonario.php" target="_blank"><a href="javascript:openPage()" ><i class="bi-printer"></i>Imprimir</a></button></div>
         </div>
 
         
@@ -118,7 +120,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="js/functions.js"></script>
 
 </body>
 </html>
