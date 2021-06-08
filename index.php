@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="text-primary"><h3>Talonario de fallas<h3></title>
+    <title class="text-primary">Talonario de fallas</title>
+        <link rel="shortcut icon" href="https://genfavicon.com/tmp/icon_3e436be7614b3486fb5c4498fb252a38.ico"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- Including Font Awesome CSS from CDN to show icons -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
         <link rel="stylesheet" href="css/styles.css">
 </script>
 
@@ -39,8 +40,8 @@
                 <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de artículo" id="descripcion_articulo" readonly disabled></div>
                 <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de falla" id="descripcion_falla" tabindex=2></div>
                 <div class="btn-toolbar pt-4">
-                    <div class="col"><button type="submit" class="btn btn-success" action="./talonario.php" target="_blank"><a href="javascript:openPage()">Imprimir</a></button></div>
-                    <div class="col"><button type="reset" class="btn btn-primary">Borrar</button></div>
+                    <div class="col"><button type="submit" class="btn btn-success" action="./talonario.php" target="_blank"><span class="fa fa-print"></span><a href="javascript:openPage()"> Imprimir</a></button></div>
+                    <div class="col"><button type="reset" class="btn btn-primary"><span class="fa fa-eraser"></span> Borrar</button></div>
                 </div>
             </div>
         </div>
