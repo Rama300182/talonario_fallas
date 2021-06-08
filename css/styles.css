@@ -1,0 +1,17 @@
+a{
+    color:white;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color:white;
+}
+
+
+@media print {
+    body {
+        background-color: tomato;
+    }
+  }
+

@@ -3,7 +3,7 @@
 class Rubro
 {
 
-    public function traerArticulo(){
+    public function traerArticulo($codigo){
         try {
 
             $servidor_central = 'servidor';
@@ -13,19 +13,25 @@ class Rubro
          } catch (PDOException $e){
                  echo $e->getMessage();
          }
-
-        $sql = "
-        SELECT COD_ARTICU, DESCRIPCIO FROM STA11 WHERE COD_ARTICU LIKE '[XO]%' AND USA_ESC = 'S'
+        $sql ="
+        SELECT TOP 1 COD_ARTICU, DESCRIPCIO FROM STA11 WHERE COD_ARTICU LIKE '$codigo' AND USA_ESC = 'S'
         ";
-        $stmt = sqlsrv_query( $cid_central, $sql );
+        $stmt = sqlsrv_query( $cid_central, $sql);
 
-        $rows = array();
+        $row=sqlsrv_fetch_array($stmt);
+        /* $rows = array();
 
         while( $v = sqlsrv_fetch_array( $stmt) ) {
-            $rows[] = $v;
-        }
-
-        return $rows;
+            $rows[] = $v
+        } */
+        echo $row['DESCRIPCIO'];
     }
-
+//'
 }    
+
+if(isset($_GET['codigo']))
+{
+$r=new Rubro();
+
+$r->traerArticulo($_GET['codigo']);
+}
