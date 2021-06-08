@@ -16,7 +16,14 @@
     #codigoBarra {
         font-family: 'Libre Barcode 39';
         font-size: 50px;
+        padding:0;
     }
+
+    
+
+    @media print{
+        @page { size: landscape; }
+  }
 </style>
 
 <html lang="en">
@@ -35,7 +42,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <?php include_once __DIR__.'../fontawesome/css.php';?>
 <link href='https://fonts.googleapis.com/css?family=Libre Barcode 39' rel='stylesheet'>
-
+<link rel="stylesheet" href="css/styles.css">
 <script> document.getElementById('load',window.print());</script>
 
 </head>
@@ -49,16 +56,13 @@
     $hoy = date("d-m-Y");
 
 ?>
-    <div>
-        <div class="container-fluid col-4 mt-4">
-            <div class="row col-12">
+    <div class="row">
+        <div class="container col mt-4">
+            <div class="row col-6">
                 <div class="col border border-secondary rounded-left">
                     <div class="mt-3 mb-2 text-center"><img src="images/LOGO XL 2018.jpg" height="50px" alt=""></div>
-                    <p class="small" id="parrafo"><strong>Local: </strong>Nine</p>
-                    <p class="small" id="parrafo2"><strong>Teléfono: </strong>9999-9999</p>
-                    <p class="small" id="parrafo2"><strong>Dirección: </strong>Pampa 2376</p>
-                    <p class="small" id="parrafo2"><strong>Localidad: </strong> Pilar</p>
-                    <p class="small" id="parrafo2"><strong>Provincia: </strong> Buenos Aires</p>
+                    <p class="small text-center" id="parrafo"><strong>Sucursal</strong></p>
+                    <h4 class="text-center">29 - Paseo del Siglo</h4>
                 </div>
 
                 <div class="col border border-secondary rounded-right" style="background-color:#e2e3e5;">
@@ -77,7 +81,7 @@
 
                 </div>
             </div>
-            <div class="row col-12">
+            <div class="row col-6">
                 <div class="col border border-secondary rounded">
                     <div>
                         <p class="small ml-3 mt-3"><strong>Destinatario: </strong>Casa Central</p>
@@ -87,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row col-12">
+            <div class="row col-6">
                 <div class="col border border-secondary rounded text-center">
                     <div style="background-color:#e2e3e5;">
                         <p class="medium mt-3"><strong>Artículo: </strong></p>
@@ -104,11 +108,82 @@
                     </div>
 
                     <div class="m-1 row">
-                        <div class="border border-dark col text-center" id="codigoBarra">*XLHC18-201-03*</div>
+                        <div class="border border-dark col text-center" id="codigoBarra"><?php if(isset($_GET['codigo'])){echo '*'.$_GET['codigo'].'*';}?></div>
                     </div>
                 </div>
             </div>
-            <div class="row col-12">
+            <div class="row col-6">
+            <div class="col border border-secondary rounded">
+                <div>
+                    <p class="medium ml-3 mt-3"><strong>Descripción de falla: </strong></p></br>
+                </div>
+                <div>
+                    <p class="medium text-center"><strong><?php if(isset($_GET['descripcion_falla'])){echo $_GET['descripcion_falla'];}?></strong></p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+        <div class="container col mt-4">
+            <div class="row col-6">
+                <div class="col border border-secondary rounded-left">
+                    <div class="mt-3 mb-2 text-center"><img src="images/LOGO XL 2018.jpg" height="50px" alt=""></div>
+                    <p class="small text-center" id="parrafo"><strong>Sucursal</strong></p>
+                    <h4 class="text-center">29 - Paseo del Siglo</h4>
+                </div>
+
+                <div class="col border border-secondary rounded-right" style="background-color:#e2e3e5;">
+                    <div class="mt-2 text-center">
+                        <h6>DEVOLUCION POR FALLA</h6>
+                    </div></br>
+                    <div class="mt-4" id="parrafo2">
+                        <p class="small"><strong>Número: </strong>921-00001</p>
+                    </div>
+                    <div class="mt-0">
+                        <p class="small" id="parrafo2"><strong>Fecha: </strong>
+                            <?=$hoy?>
+                        </p>
+                        <div class="text-center display-4"><strong>F</strong></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row col-6">
+                <div class="col border border-secondary rounded">
+                    <div>
+                        <p class="small ml-3 mt-3"><strong>Destinatario: </strong>Casa Central</p>
+                    </div>
+                    <div>
+                        <p class="small ml-3 mt-3"><strong>Localidad: </strong>Victoria</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-6">
+                <div class="col border border-secondary rounded text-center">
+                    <div style="background-color:#e2e3e5;">
+                        <p class="medium mt-3"><strong>Artículo: </strong></p>
+                    </div>
+                    <div id="parrafo2">
+                        <p class="medium border"><strong><?php if(isset($_GET['codigo'])){echo $_GET['codigo'];}?></strong></p>
+                    </div>
+
+                    <div style="background-color:#e2e3e5;">
+                        <p class="medium mt-3"><strong>Descripción: </strong></p>
+                    </div>
+                    <div id="parrafo2">
+                        <p class="medium border"><strong><?php if(isset($_GET['descripcion'])){echo $_GET['descripcion'];}?></strong></p>
+                    </div>
+
+                    <div class="m-1 row">
+                        <div class="border border-dark col text-center" id="codigoBarra"><?php if(isset($_GET['codigo'])){echo '*'.$_GET['codigo'].'*';}?></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-6">
             <div class="col border border-secondary rounded">
                 <div>
                     <p class="medium ml-3 mt-3"><strong>Descripción de falla: </strong></p></br>
@@ -119,7 +194,10 @@
             </div>
         </div>
 
-    </div>
+        </div>
+
+
+
     </div>
 
 
