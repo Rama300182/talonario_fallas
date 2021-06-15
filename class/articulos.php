@@ -18,16 +18,19 @@ class Rubro
         ";
         $stmt = sqlsrv_query( $cid_central, $sql);
 
-        $row=sqlsrv_fetch_array($stmt);
-        /* $rows = array();
-
-        while( $v = sqlsrv_fetch_array( $stmt) ) {
-            $rows[] = $v
-        } */
-        echo $row['DESCRIPCIO'];
+       
+       if($row=sqlsrv_fetch_array($stmt))
+       {
+         echo $row['DESCRIPCIO'];
+        }else{
+            echo 'error';
+        }
     }
+     
+    }
+
+  
 //'
-}    
 
 if(isset($_GET['codigo']))
 {

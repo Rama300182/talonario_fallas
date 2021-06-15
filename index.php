@@ -27,7 +27,7 @@
     </div>
 
 
-   <form>
+   <form id="form">
         <div class="container ml-4 pt-4">
             <div class="row">
                 <div class="col-3"><label for="Artículo">Artículo</label></div>
@@ -36,15 +36,23 @@
             </div>
             
             <div class="row">
-                <div class="col-3"><input type="text" class="form-control" placeholder="Ingrese artículo" id="codigo" tabindex=1></div>
+                <div class="col-3"><input type="text" class="form-control" placeholder="Ingrese artículo" id="codigo" tabindex=1>
+                <p class="mensaje" id="msj_error">Código Inexistente</p>
+                </div>
                 <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de artículo" id="descripcion_articulo" readonly disabled></div>
                 <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de falla" id="descripcion_falla" tabindex=2></div>
+              
+        </div>
+       <!--  <div class="mensaje">
+                hola
+                </div>  -->
                 <div class="btn-toolbar pt-4">
-                    <div class="col"><button type="submit" class="btn btn-success" action="./talonario.php" target="_blank"><span class="fa fa-print"></span><a href="javascript:openPage()"> Imprimir</a></button></div>
+                    <div class="col"><button type="submit" id="submit" class="btn btn-success" action="./talonario.php" target="_blank"><i class="fas fa-barcode"></i><a href="javascript:openPage()"> Imprimir</a></button></div>
                     <div class="col"><button type="reset" class="btn btn-primary"><span class="fa fa-eraser"></span> Borrar</button></div>
                 </div>
+               
             </div>
-        </div>
+         
     </form>
 
             

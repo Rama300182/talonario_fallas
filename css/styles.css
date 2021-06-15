@@ -9,9 +9,33 @@ a:hover
 }
 
 
+/* .error
+{
+    color:red;
+} */
+
+.horizontal_print
+{
+display: flex;
+flex-direction: row;
+}
+
+.mensaje
+{
+    color:red;
+    margin:2px 0 0 0; 
+    padding: 0;
+    width: 150px;
+    text-align: center;
+    font-size: .8rem;
+    visibility: hidden;
+}
+
 @media print {
-    body {
-        background-color: tomato;
+    @page {
+           
+      size: landscape;
+ 
     }
   }
 

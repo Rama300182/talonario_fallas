@@ -23,7 +23,9 @@
 
     @media print{
         @page { size: landscape; }
+        *{margin:0;padding:0;}
   }
+  
 </style>
 
 <html lang="en">
@@ -43,7 +45,11 @@
 <?php include_once __DIR__.'../fontawesome/css.php';?>
 <link href='https://fonts.googleapis.com/css?family=Libre Barcode 39' rel='stylesheet'>
 <link rel="stylesheet" href="css/styles.css">
-<script> document.getElementById('load',window.print());</script>
+<script> /* document.getElementById('load',window.print()); */</script>
+<script>
+   /*  window.print();
+    window.close(); */
+   </script>
 
 </head>
 
@@ -56,7 +62,7 @@
     $hoy = date("d-m-Y");
 
 ?>
-    <div class="row">
+    <div class="row-modal horizontal_print">
         <div class="container col mt-4">
             <div class="row col-6">
                 <div class="col border border-secondary rounded-left">
@@ -208,7 +214,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
+   <script>
+  
+   /*  window.close();  */
+   </script>
 </HTMl>
 <?php
 if(isset($_GET['codigo']))
