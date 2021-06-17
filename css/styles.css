@@ -9,15 +9,21 @@ a:hover
 }
 
 
-/* .error
+.error
 {
-    color:red;
-} */
+    border:1px solid red;
+}
+
+.error:focus
+{
+    border:1px solid red;
+}
 
 .horizontal_print
 {
 display: flex;
 flex-direction: row;
+justify-content:space-between
 }
 
 .mensaje
@@ -31,11 +37,58 @@ flex-direction: row;
     visibility: hidden;
 }
 
+.width-btn
+{
+    width: 10vw;
+    margin-right: 35px;
+}
+
+.btn_talonario
+{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+  }
+
+  .cerrar
+  {
+    
+      background-color: red;
+  }
+  .cerrar:hover
+  {
+      background-color: rgb(252, 55, 55);
+  }
+
+body{
+    width: 100vw;
+}
+
+.col-10
+{
+    max-width: 40%;
+}
+
+
+/* .container
+{
+    width: 30%;
+} */
+
 @media print {
-    @page {
+     @page {
            
-      size: landscape;
+      size:landscape;
  
+    }
+
+    body{
+        transform: scale(0.85,1);
+    }
+
+    .btn_talonario
+    {
+        display: none;
     }
   }
 
