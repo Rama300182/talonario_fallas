@@ -70,7 +70,7 @@
 
     ?>
     <div class="row-modal horizontal_print">
-        <div class="container col-6 mt-4">
+        <div class="container col-5 mt-4">
             <div class="row col-9">
                 <div class="col border border-secondary rounded-left">
                     <div class="mt-3 mb-2 text-center"><img src="images/LOGO XL 2018.jpg" height="50px" alt=""></div>
@@ -149,7 +149,7 @@
 
 
 
-        <div class="container col-6 mt-4">
+        <div class="container col-5 mt-4">
             <div class="row col-9">
                 <div class="col border border-secondary rounded-left">
                     <div class="mt-3 mb-2 text-center"><img src="images/LOGO XL 2018.jpg" height="50px" alt=""></div>
