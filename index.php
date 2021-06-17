@@ -38,7 +38,7 @@
             
             <div class="row">
                 <div class="col-3"><input type="text" class="form-control" placeholder="Ingrese artículo" id="codigo" tabindex=1>
-                <p class="mensaje" id="msj_error">Código Inexistente</p>
+                <p class="mensaje col text-danger" id="msj_error">Código inexistente</p>
                 </div>
                 <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de artículo" id="descripcion_articulo" readonly disabled></div>
                 <div class="col-4"><input type="text" class="form-control error" placeholder="Descripción de falla" id="descripcion_falla" tabindex=2></div>
@@ -47,8 +47,8 @@
        <!--  <div class="mensaje">
                 hola
                 </div>  -->
-                <div class="btn-toolbar pt-4">
-                    <div class="width-btn"><button type="button" id="submit" class="btn btn-success "  target="_blank"><i class="far fa-file-pdf"></i><!-- <a href="javascript:openPage()"> --> Generar<!-- </a> --></button></div>
+                <div class="btn-toolbar pt-3">
+                    <div class="width-btn"><button type="button" id="submit" class="btn btn-success "  target="_blank"><i class="far fa-check-square"></i><!-- <a href="javascript:openPage()"> --> Generar<!-- </a> --></button></div>
                     <div class="width-btn"><button type="reset" class="btn btn-primary"><span class="fa fa-eraser"></span> Borrar</button></div>
                 </div>
                 
