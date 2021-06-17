@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- Including Font Awesome CSS from CDN to show icons -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
 </script>
 
@@ -27,7 +28,7 @@
     </div>
 
 
-   <form>
+   <form id="form">
         <div class="container ml-4 pt-4">
             <div class="row">
                 <div class="col-3"><label for="Artículo">Artículo</label></div>
@@ -36,15 +37,23 @@
             </div>
             
             <div class="row">
-                <div class="col-3"><input type="text" class="form-control" placeholder="Ingrese artículo" id="codigo" tabindex=1></div>
-                <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de artículo" id="descripcion_articulo" readonly disabled></div>
-                <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de falla" id="descripcion_falla" tabindex=2></div>
-                <div class="btn-toolbar pt-4">
-                    <div class="col"><button type="submit" class="btn btn-success" action="./talonario.php" target="_blank"><span class="fa fa-print"></span><a href="javascript:openPage()"> Imprimir</a></button></div>
-                    <div class="col"><button type="reset" class="btn btn-primary"><span class="fa fa-eraser"></span> Borrar</button></div>
+                <div class="col-3"><input type="text" class="form-control" placeholder="Ingrese artículo" id="codigo" tabindex=1>
+                <p class="mensaje" id="msj_error">Código Inexistente</p>
                 </div>
-            </div>
+                <div class="col-4"><input type="text" class="form-control" placeholder="Descripción de artículo" id="descripcion_articulo" readonly disabled></div>
+                <div class="col-4"><input type="text" class="form-control error" placeholder="Descripción de falla" id="descripcion_falla" tabindex=2></div>
+              
         </div>
+       <!--  <div class="mensaje">
+                hola
+                </div>  -->
+                <div class="btn-toolbar pt-4">
+                    <div class="width-btn"><button type="button" id="submit" class="btn btn-success "  target="_blank"><i class="far fa-file-pdf"></i><!-- <a href="javascript:openPage()"> --> Generar<!-- </a> --></button></div>
+                    <div class="width-btn"><button type="reset" class="btn btn-primary"><span class="fa fa-eraser"></span> Borrar</button></div>
+                </div>
+                
+            </div>
+         
     </form>
 
             
